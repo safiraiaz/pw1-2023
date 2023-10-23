@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial,sans-serif;
+    background-color: cyan;
+    color: black;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.segitiga {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.segitiga h3 {
+    color: white;
+}
+
+.segitiga ul {
+    margin-left: 40px;
+}
+
+header h1 {
+    font-size: 2.0em;
+}
+
+section {
+    background-color: white;
+    margin: 20px 200px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0.1);
+}
+
+section h3 {
+    color: black;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.gambar {
+    text-align: center;
+}
+```
