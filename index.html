@@ -1,99 +1,37 @@
-<!DOCTYPE html
-<html>
-    <head>
-        <title>TUGAS HTML</title>
-    </head>
-    <body>
-        <header>
-            <h1>Selamat Datang Di My Gallery Wishlist </h1>
-        </header>
-        
-            <main>
-                <section>
-                    <h4>Profil Pembuat</h4>
-                    <ul>
-                        <li>Nama:[Safira Innayah Azzahro]</li>
-                        <li>Email:[safirainnayah08@gmail.com]</li>
-                        <li>Linkedin:<a href="https://www.linkedin.com/in/safira-innayah-801266293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank">Linkedin safira</a>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h4> Deskripsi My Gallery Wishlist</h4>
-                    <p>Ini adalah halaman web gallery yang menampilkan daftar kota idaman saya yang ada di Indonesia dan luar negri.Kota atau Daerah ini memiliki keindahan alam, budaya, sejarah, dan kenangan unik yang tidak semua kota memilikinya</p>
-                </section>
-                <section>
-                    <h4>Foto Kota Favorit</h4>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR37oABIs34kARimuGB7bZOvMBu9mm1jEuXExl4aCJXICGtC_dM33hN846qsrmUZixuPUI&usqp=CAU"alt="Kota Bandung"style="widht:150px;height:150px;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4lkupHHJ_wFRy2AlPagnLCxt2IFTutXe5jtHzBFnMSKNjqsHYzYGWtFzxjEBD2KI94eU&usqp=CAU"alt="Kota Surabaya"style="widht:150px;height;150px;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUEiZGSlvtxR6Gg2PcomWwSMYufWw2sn36ZrMovLe3IgjZqu5PySXm5FkSpPbhgPJcAU&usqp=CAU"alt="Kota Yogyakarta"style="width=150px;height;150px;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6SVFQGcRMr_BXJYt1Puj4hxIvive336dRDnzO2UCaLG_dOMpIuaDjjbjUnx7hLsWyIk&usqp=CAU"alt="Kota Mekkah"style="widht:150px;height;150px;">
-             </section>
-             <section>
-                 <h4>Informasi Kota Favorit</h4>
-                 <style>
-                     table, th, td
-                     [border:1px solid black]
-                 </style>
-                 <table border="10">
-                     <tr>
-                         <th>Nama Kota</th>
-                         <th> Ikon Kota</th>
-                         <th>Jumlah Penduduk</th>
-                         <th>Ciri Khas</th>
-                     </tr>
-                     <tr>
-                         <td>Bandung</td>
-                         <td>Gedung Sate</td>
-                         <td>2,5 juta</td>
-                         <td>Bolu susu</td>
-                     </tr>
-                     <tr>
-                         <td>Surabaya</td>
-                         <td>Tugu Pahlawan</td>
-                         <td>3,1 juta</td>
-                         <td>Patung Suro dan Boyo</td>
-                     </tr>
-                     <tr>
-                         <td>Yogyakarta</td>
-                         <td>Malioboro</td>
-                         <td>3,67 juta</td>
-                         <td>gudeg</td>
-                     </tr>
-                     <tr>
-                         <td>Mekkah</td>
-                         <td>ka'bah</td>
-                         <td>2,1 juta</td>
-                         <td>makam Nabi Muhammad SAW</td>
-                     </tr>
-                 </table>
-             </section>
-             
-             <section>
-                 <h2>Formulir Kontak</h2>
-                 <form>
-                     <label>Nama Anda:</label>
-                     <input type="email">
-                     <br>
-                     
-                     <label>Usia Anda:</label>
-                     <input type="usia">
-                     <br>
-                     
-                     <label>Tanggal Kunjungan:</label>
-                     <input type="date">
-                     <br>
-                     
-                     <label>Pesanan Anda:</label>
-                     <textarea cols="40"rows="4"></textarea>
-                     <br><br>
-                     
-                     <input type="submit"value="kirim">
-                 </form>
-             </section>
-        </main>
-        <footer>
-            <h6>Copyright o 2023 SAFIRA INNAYAH AZZAHRO</h6>
-        </footer>
-    </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Lingkaran</title>
+
+    <!-- style css -->
+    <style>
+        body { text-align: center; }
+    </style>
+</head>
+<body>
+    <h2>Menghitung Luas & Keliling Lingkaran</h2>
+    <br>
+    <span>Masukan Jari-jari </span><input type="number" id="jari">
+    <button onclick="hitung()">Hitung</button>
+    <p id="luasHasil"></p>
+    <p id="kelilingHasil"></p>
+    
+    <!-- javascript -->
+    <script>
+        function hitung() {
+            const phi = 3.14
+            let r = document.getElementById("jari").value
+            //luas lingkaran
+            let luasHasil = document.getElementById("luasHasil")
+            let luas = phi * (r * r)
+            luasHasil.innerText = "Luas Lingkaran : " + luas + " cm2"
+            //keliling lingkaran
+            let kelilingHasil = document.getElementById("kelilingHasil")
+            let keliling = 2 * phi * r
+            kelilingHasil.innerHTML = "Keliling Lingkaran : " + keliling + " cm"
+        }
+    </script>
+</body>
 </html>
