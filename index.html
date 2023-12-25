@@ -1,37 +1,53 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menghitung Lingkaran</title>
-
-    <!-- style css -->
+    <title>Login Page</title>
     <style>
-        body { text-align: center; }
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: skyblue;
+        }
+
+        .container {
+            background-color: burlywood;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h2>Menghitung Luas & Keliling Lingkaran</h2>
-    <br>
-    <span>Masukan Jari-jari </span><input type="number" id="jari">
-    <button onclick="hitung()">Hitung</button>
-    <p id="luasHasil"></p>
-    <p id="kelilingHasil"></p>
-    
-    <!-- javascript -->
-    <script>
-        function hitung() {
-            const phi = 3.14
-            let r = document.getElementById("jari").value
-            //luas lingkaran
-            let luasHasil = document.getElementById("luasHasil")
-            let luas = phi * (r * r)
-            luasHasil.innerText = "Luas Lingkaran : " + luas + " cm2"
-            //keliling lingkaran
-            let kelilingHasil = document.getElementById("kelilingHasil")
-            let keliling = 2 * phi * r
-            kelilingHasil.innerHTML = "Keliling Lingkaran : " + keliling + " cm"
-        }
-    </script>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script src="auth.js"></script>
 </body>
 </html>
